@@ -1,0 +1,118 @@
+.body-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #e5e1e1;
+}
+.form-login {
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    //height: 250px;
+    padding: 30px;
+    background: #f5f8fa;
+    border: 1px solid #878787;
+    border-radius: 7px;
+}
+.dop1 {
+    width: 100%;
+    height: 25px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-title {
+    font-size: 24px;
+    position: absolute;
+}
+.form-container {
+    position: relative;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+}
+.dop2 {
+    position: relative;
+    display: block;
+}
+.form-group {
+    display: block;
+    position: relative;
+    padding: 0 0 0px 0;
+    width: 100%;
+}
+.form-input {
+    font-size: 18px;
+    margin-top: 10px;
+    //position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 35px;
+    padding: 10px 0px 0px 5px;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 5px;
+    z-index: 0;
+    //background: transparent;
+}
+.form-label {
+    position: absolute;
+    font-size: 20px;
+    left: 0px;
+    top: -10px;
+    //color: #5c5959;
+    z-index: 1;
+    transition: 0.3s;
+}
+.form-input:focus + .form-label {
+    font-size: 30px;
+}
+.form-input:required:valid + .form-label {
+    font-size: 10px;
+}
+.dop3 {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-button {
+    position: absolute;
+    font-size: 16px;
+    bottom: 0px;
+    color: #395744;
+    width: 160px;
+    padding: 9px;
+    text-align: center;
+    background: #8fd6ff;
+    border-radius: 10px;
+    border: 1px solid;
+}
+.form-button:hover {
+    //width: 160px;
+    //padding: 9px;
+    //bottom: 0px;
+    position: absolute;
+    background: #54c7d6;
+    border: 2px solid;
+}
+.dop4 {
+    position: relative;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    padding: 0 0 10px 0;
+}
+.register-url {
+    text-decoration: none;
+    border: 1px solid #d6d0d0;
+    border-radius: 5px;
+    padding: 3px 10px 1px 10px;
+}

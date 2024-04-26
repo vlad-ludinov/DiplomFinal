@@ -1,0 +1,53 @@
+{% extends 'libapp/base.html' %}
+{% block content %}
+    <div class="content-title-author">
+        <div class="author-dop">
+            <div class="author-title-dop">
+                <a class="author-title">Авторы:</a>
+            </div>
+            <div class="author-name">{{author.name}}</div>
+        </div>
+        <div class="author-edit-dop">
+            <a class="edit-author">Отредактировать</a>
+            <a class="delete-author">Удалить</a>
+        </div>
+    </div>
+    <div class="content-title-series-books">
+        <div class="series-books-dop">
+            <a class="series-books-title">Серии</a>
+        </div>
+        <div class="add-dop">
+            <a class="add">Добавить серию</a>
+        </div>
+    </div>
+    {% for series in series_book %}
+        <div class="show-series-book" >
+            <div class="show-series-book-dop">
+                <a class="series-book">{{ series.name }}</a>
+                <a class="series-book-rating">{{ series.rating }} из 10</a>
+                {% if series.is_completed %}
+                <a class="series-book-status">Завершена</a>
+                {% else %}
+                <a class="series-book-status">Не завершена</a>
+                {% endif %}
+                <div class="series-book-description-dop">
+                    <a class="series-book-description">{{ series.description }}</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+{% block delete %}
+    <form class="form-delete" method="post">
+        {% csrf_token %}
+        <div class="delete-dop">
+            <div class="delete-text-dop">
+                <a class="delete-text">Вы точно хотите удалить автора?</a>
+            </div>
+            <div class="delete-button-dop">
+            <a class="cancel-button" href="{% url 'show_author' author.pk %}">Отмена</a>
+            <button class="delete-button" type="submit" name="delete_button" value="delete">Удалить</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

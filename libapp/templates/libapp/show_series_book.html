@@ -1,0 +1,55 @@
+{% extends 'libapp/base.html' %}
+{% block content %}
+    <div class="content-title-author">
+        <div class="author-dop">
+            <div class="author-title-dop">
+                <a class="author-title" href="{% url 'show_authors' %}">Авторы:</a>
+            </div>
+            <div class="author-name">{{author.name}}</div>
+        </div>
+        <div class="author-edit-dop">
+            <a class="edit-author"
+               href="{% url 'edit_series_book_page' author.pk series_book.pk delete.author author.pk %}">Отредактировать</a>
+            <a class="delete-author"
+               href="{% url 'delete_series_book_page' author.pk series_book.pk delete.author %}">Удалить</a>
+        </div>
+    </div>
+    <div class="content-title-series-book">
+        <div class="series-book-dop">
+            <div class="series-book-title-dop">
+                <a class="series-book-title" href="{% url 'show_author' author.pk %}">Серии:</a>
+            </div>
+            <div class="series-book-name">{{series_book.name}}</div>
+        </div>
+        <div class="series-book-edit-dop">
+            <a class="edit-series-book"
+               href="{% url 'edit_series_book_page' author.pk series_book.pk delete.series_book series_book.pk %}">Отредактировать</a>
+            <a class="delete-series-book"
+               href="{% url 'delete_series_book_page' author.pk series_book.pk delete.series_book %}">Удалить</a>
+        </div>
+    </div>
+    <div class="content-title-books">
+        <div class="books-dop">
+            <a class="books-title">Книги</a>
+        </div>
+        <div class="add-dop">
+            <a class="add" href="{% url 'add_book' author.pk series_book.pk %}">Добавить книгу</a>
+        </div>
+    </div>
+    {% for book in books %}
+        <div class="show-book" >
+            <div class="show-book-dop">
+                <a class="book" href="{% url 'show_book' author.pk series_book.pk book.pk %}">{{ book.name }}</a>
+                <a class="book-rating">{{ book.rating }} из 10</a>
+                {% if book.is_completed %}
+                <a class="book-status">Завершена</a>
+                {% else %}
+                <a class="book-status">Не завершена</a>
+                {% endif %}
+                <div class="book-description-dop">
+                    <a class="book-description">{{ book.description }}</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

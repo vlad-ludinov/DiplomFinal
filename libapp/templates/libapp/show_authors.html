@@ -1,0 +1,18 @@
+{% extends 'libapp/base.html' %}
+{% block content %}
+    <div class="content-title-author">
+        <div class="authors-dop">
+            <a class="authors-title">Авторы</a>
+        </div>
+        <div class="add-dop">
+            <a class="add" href="{% url 'add_author' %}">Добавить автора</a>
+        </div>
+    </div>
+    {% for author in authors %}
+        <div class="show-authors">
+            <div class="show-author-dop">
+                <a class="author" href="{% url 'show_author' author.pk %}">{{ author.name }}</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

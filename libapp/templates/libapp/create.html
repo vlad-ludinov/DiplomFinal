@@ -1,0 +1,31 @@
+{% extends 'libapp/base.html' %}
+{% block content %}
+    <div class="dop7">
+{% if back_url.authors %}
+    <a class="back-button" href="{% url 'show_authors' %}">Назад</a>
+{% elif back_url.author %}
+    <a class="back-button" href="{% url 'show_author' author.pk %}">Назад</a>
+{% elif back_url.series_book %}
+    <a class="back-button" href="{% url 'show_series_book' author.pk series_book.pk %}">Назад</a>
+{% elif back_url.book %}
+    <a class="back-button" href="{% url 'show_book' author.pk series_book.pk book.pk %}">Назад</a>
+{% endif %}
+        <form class="form-add" method="post" enctype="multipart/form-data">
+            <div class="dop8">
+                <div class="form-add-title">{{title}}</div>
+            </div>
+            <div class="dop5">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}" />
+                <div class="form-error">{{ form.non_field_errors }}</div>
+                {% for f in form %}
+                <div class="form-group">
+                    <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}</label>{{ f }}</p>
+                    <div class="form-error">{{ f.errors }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="dop6"><input class="form-button" type="submit" value="Сохранить"></div>
+        </form>
+    </div>
+{% endblock %}

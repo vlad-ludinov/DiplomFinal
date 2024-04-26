@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+	<link type="text/css" href="{% static 'libapp/css/styleslib.css' %}" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="main-block">
+    <div class="dop1">
+        <div class="header">
+            <div class="header-menu">
+                <div class="logo">
+                    <a class="logo-name">LibNote</a>
+                </div>
+                <a class="main-page" href="{% url 'main_page' %}">Главная</a>
+            </div>
+            <div class="header-logout">
+                <a class="username">{{user.username}}</a>|
+                <a class="logout" href="{% url 'users:logout' %}">Выйти</a>
+            </div>
+        </div>
+    </div>
+    <div class="dop2">
+        <div class="menu">
+            <a class="menu-url" href="{% url 'show_authors' %}">Авторы</a>
+        </div>
+        <div class="content">
+            {% block content %} {% endblock %}
+        </div>
+    </div>
+</div>
+{% block delete %}{% endblock %}
+</body>
+</html>

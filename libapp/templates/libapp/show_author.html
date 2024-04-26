@@ -1,0 +1,39 @@
+{% extends 'libapp/base.html' %}
+{% block content %}
+    <div class="content-title-author">
+        <div class="author-dop">
+            <div class="author-title-dop">
+                <a class="author-title" href="{% url 'show_authors' %}">Авторы:</a>
+            </div>
+            <div class="author-name">{{author.name}}</div>
+        </div>
+        <div class="author-edit-dop">
+            <a class="edit-author" href="{% url 'edit_author_page' author.pk delete.author author.pk %}">Отредактировать</a>
+            <a class="delete-author" href="{% url 'delete_author_page' author.pk delete.author %}">Удалить</a>
+        </div>
+    </div>
+    <div class="content-title-series-books">
+        <div class="series-books-dop">
+            <a class="series-books-title">Серии</a>
+        </div>
+        <div class="add-dop">
+            <a class="add" href="{% url 'add_series_book' author.pk %}">Добавить серию</a>
+        </div>
+    </div>
+    {% for series in series_book %}
+        <div class="show-series-book" >
+            <div class="show-series-book-dop">
+                <a class="series-book" href="{% url 'show_series_book' author.pk series.pk %}">{{ series.name }}</a>
+                <a class="series-book-rating">{{ series.rating }} из 10</a>
+                {% if series.is_completed %}
+                <a class="series-book-status">Завершена</a>
+                {% else %}
+                <a class="series-book-status">Не завершена</a>
+                {% endif %}
+                <div class="series-book-description-dop">
+                    <a class="series-book-description">{{ series.description }}</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

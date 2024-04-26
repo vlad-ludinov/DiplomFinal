@@ -1,0 +1,73 @@
+{% extends 'libapp/base.html' %}
+{% block content %}
+    <div class="content-title-author">
+        <div class="author-dop">
+            <div class="author-title-dop">
+                <a class="author-title">Авторы:</a>
+            </div>
+            <div class="author-name">{{author.name}}</div>
+        </div>
+        <div class="author-edit-dop">
+            <a class="edit-author">Отредактировать</a>
+            <a class="delete-author">Удалить</a>
+        </div>
+    </div>
+    <div class="content-title-series-book">
+        <div class="series-book-dop">
+            <div class="series-book-title-dop">
+                <a class="series-book-title">Серии:</a>
+            </div>
+            <div class="series-book-name">{{series_book.name}}</div>
+        </div>
+        <div class="series-book-edit-dop">
+            <a class="edit-series-book">Отредактировать</a>
+            <a class="delete-series-book">Удалить</a>
+        </div>
+    </div>
+    <div class="content-title-book">
+        <div class="book-dop">
+            <div class="book-title-dop">
+                <a class="book-title">Книги:</a>
+            </div>
+            <div class="book-name">{{book.name}}</div>
+        </div>
+        <div class="book-edit-dop">
+            <a class="edit-book">Отредактировать</a>
+            <a class="delete-book">Удалить</a>
+        </div>
+    </div>
+        <div class="show-book" >
+            <div class="show-book-dop">
+                <a class="book">{{ book.name }}</a>
+                <a class="book-rating">{{ book.rating }} из 10</a>
+                {% if book.is_completed %}
+                <a class="book-status">Завершена</a>
+                {% else %}
+                <a class="book-status">Не завершена</a>
+                {% endif %}
+                <div class="book-description-dop">
+                    <a class="book-description-full">{{ book.description }}</a>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+{% block delete %}
+    <form class="form-delete" method="post">
+        {% csrf_token %}
+        <div class="delete-dop">
+            <div class="delete-text-dop">
+                {% if delete == "author" %}
+                    <a class="delete-text">Вы точно хотите удалить автора?</a>
+                {% elif delete == "series_book" %}
+                    <a class="delete-text">Вы точно хотите удалить серию?</a>
+                {% elif delete == "book" %}
+                    <a class="delete-text">Вы точно хотите удалить книгу?</a>
+                {% endif %}
+            </div>
+            <div class="delete-button-dop">
+            <a class="cancel-button" href="{% url 'show_book' author.pk series_book.pk book.pk %}">Отмена</a>
+            <button class="delete-button" type="submit" name="delete_button" value="delete">Удалить</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

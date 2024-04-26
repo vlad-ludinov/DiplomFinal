@@ -1,0 +1,698 @@
+body {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #ffb46e;
+    margin: 0 0 0 0;
+}
+.main-block {
+    margin-top: 0px;
+    //margin: 0 0 0 0;
+    display: block;
+    //border: 5px solid #000;
+    //width: 800px;
+    //min-height: 900px;
+    width: 100%;
+    min-height: 100%;
+    //border-radius: 15px;
+    background: #fac696;
+}
+.dop1 {
+    //border: 2px solid;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header {
+    width: 100%;
+    height: 100%;
+    background: #7a4512;
+    //border-radius: 10px;
+    //border-top-left-radius: 10px;
+    //border-top-right-radius: 10px;
+    display: flex;
+}
+.header-menu {
+    width: 50%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    //border: 3px solid;
+    font-size: 35px;
+    padding: 23px 0 0 10px;
+}
+.logo {
+    border: 5px solid;
+    border-radius: 10px;
+    background: #bafffa;
+    padding: 0px 10px 16px 10px;
+    height: 30px;
+}
+.logo-name {
+    font-size: 26px;
+}
+.main-page {
+    padding: 4px 0 0 20px;
+    //font-size: 35px;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: blue;
+}
+.dop9 {
+    width: 70%;
+}
+.main-description {
+    font-size: 30px;
+    border: 2px solid;
+    border-radius: 15px;
+    background: #edb077;
+    padding: 20px;
+    margin-top: 15px;
+}
+//.delete-dop {
+    //border: 3px solid;
+    //width: 20%;
+    //display: flex;
+    //position: relative;
+    //align-items: center;
+    //justify-content: center;
+//}
+.form-delete {
+    //position: absolute;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f8fa;
+    z-index: 999;
+    border: 3px solid;
+    border-radius: 5px;
+    width: 400px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+.delete-dop {
+    display: block;
+    position: relative;
+}
+.delete-text-dop {
+    padding: 20px 0 0 0;
+    width: 300px;
+    //border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delete-text {
+    font-size: 20px;
+    width: 100%;
+    border: 0px solid;
+    text-align: center;
+}
+.delete-button-dop {
+    padding: 20px 0 0 0;
+    margin-top: 10px;
+    display: flex;
+    height: 40px;
+    //border: 2px solid;
+}
+.cancel-button {
+    padding: 10px;
+    border: 3px solid #000;
+    border-radius: 5px;
+    background: #d6d2d2;
+    color: black;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+.delete-button {
+    padding: 12px 10px;
+    background: #ed3441;
+    border-radius: 5px;
+    border: 3px solid;
+    margin-left: 70px;
+}
+.header-logout {
+    font-size: 30px;
+    width: 50%;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    //border: 3px solid;
+    padding: 28px 10px 0 0;
+}
+.username {
+    font-size: 26px;
+    padding: 2px 3px 0 0;
+}
+.logout {
+    font-size: 26px;
+    padding: 2px 0 0 3px;
+}
+.dop2 {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.menu {
+    width: 200px;
+    height: 300px;
+    border: 1px solid;
+    border-radius: 10px;
+    background: #edb077;
+    margin: 10px 0 0 10px;
+    z-index: 5;
+    display: block;
+    font-size: 25px;
+    padding: 10px 0 10px 20px;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+}
+.menu-url {
+
+}
+.content {
+    width: 100%;
+    height: 100%;
+    //border: 5px solid;
+    //border-radius: 5px;
+    z-index: 5;
+    padding: 10px 0 0 30px;
+}
+.content-title-author {
+    display: flex;
+    //border: 2px solid;
+    //border-radius: 5px;
+    width: 90%;
+    padding: 5px 0 10px 0;
+}
+.authors-dop {
+    //border: 3px solid;
+    width: 100%;
+}
+.authors-title {
+    border: 2px solid;
+    border-radius: 5px;
+    background: #edb077;
+    padding: 0 14px 5px 10px;
+    font-size: 50px;
+    height: 100px;
+}
+.add-dop {
+    //border: 3px solid;
+    width: 210px;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+.add {
+    margin-left: 10px;
+    margin-top: 4px;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 10px 5px 10px;
+    border: 2px solid #000;
+    border-radius: 9px;
+    background: #edb077;
+    //position: absolute;
+    //left: 500px;
+}
+.show-authors {
+    //padding: 5px 0px 5px 10px;
+    margin-top: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    width: 90%;
+    height: 70px;
+    font-size: 40px;
+    background: #edb077;
+    //align-items: center;
+    //z-index: 20;
+}
+.show-author-dop {
+    padding: 10px 0px 10px 10px;
+}
+.author-dop {
+    position: relative;
+    width: 100%;
+    display: flex
+    //max-width: 30ch;
+    border: 2px solid;
+    border-radius: 5px;
+    background: #edb077;
+}
+.author-title-dop {
+    width: 200px;
+    //border: 2px solid;
+}
+.author-title {
+    padding: 0 14px 5px 10px;
+    font-size: 50px;
+    //height: 100px;
+}
+.author-name {
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    //border: 2px solid;
+    width: 740px;
+    font-size: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.author-edit-dop {
+    //border: 3px solid;
+    width: 300px;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+.edit-author, .delete-author {
+    margin-left: 10px;
+    margin-top: 4px;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 10px 5px 10px;
+    border: 2px solid #000;
+    border-radius: 9px;
+    background: #edb077;
+    //position: absolute;
+    //left: 500px;
+}
+.content-title-series-books {
+    display: flex;
+    //border: 2px solid;
+    //border-radius: 5px;
+    width: 90%;
+    padding: 5px 0 10px 0;
+}
+.series-books-dop {
+    //border: 3px solid;
+    width: 100%;
+}
+.series-books-title {
+    border: 2px solid;
+    border-radius: 5px;
+    background: #edb077;
+    padding: 0 14px 5px 10px;
+    font-size: 50px;
+    height: 100px;
+}
+.show-series-book {
+    //padding: 5px 0px 5px 10px;
+    margin-bottom: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    width: 90%;
+    //height: 70px;
+    font-size: 40px;
+    background: #edb077;
+    //align-items: center;
+    //z-index: 20px;
+}
+.show-series-book-dop {
+    position: relative;
+    display: block;
+    padding: 10px 0px 10px 10px;
+}
+.series-book-rating {
+    position: absolute;
+    right: 10px;
+}
+.series-book-status {
+    position: absolute;
+    left: 10px;
+    top: 55px;
+    //margin-top: 10px;
+    font-size: 18px;
+}
+.series-book-br {
+    margin: 100px;
+}
+.series-book-description-dop {
+    margin: 25px 10px 0 0;
+    padding: 0 0 -10px 0;
+}
+.series-book-description {
+    font-size: 30px;
+    margin: 0;
+    -webkit-line-clamp: 4; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+
+}
+.content-title-series-book {
+    display: flex;
+    //border: 2px solid;
+    //border-radius: 5px;
+    width: 90%;
+    padding: 5px 0 10px 0;
+}
+.series-book-dop {
+    position: relative;
+    width: 100%;
+    display: flex
+    //max-width: 30ch;
+    border: 2px solid;
+    border-radius: 5px;
+    background: #edb077;
+}
+.series-book-title-dop {
+    width: 170px;
+    //border: 2px solid;
+}
+.series-book-title {
+    padding: 0 14px 5px 10px;
+    font-size: 50px;
+    //height: 100px;
+}
+.series-book-name {
+    position: absolute;
+    left: 170px;
+    top: 0px;
+    //border: 2px solid;
+    width: 770px;
+    font-size: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.series-book-edit-dop {
+    //border: 3px solid;
+    width: 300px;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+.edit-series-book, .delete-series-book {
+    margin-left: 10px;
+    margin-top: 4px;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 10px 5px 10px;
+    border: 2px solid #000;
+    border-radius: 9px;
+    background: #edb077;
+    //position: absolute;
+    //left: 500px;
+}
+.content-title-books {
+    display: flex;
+    //border: 2px solid;
+    //border-radius: 5px;
+    width: 90%;
+    padding: 5px 0 10px 0;
+}
+.books-dop {
+    //border: 3px solid;
+    width: 100%;
+}
+.books-title {
+    border: 2px solid;
+    border-radius: 5px;
+    background: #edb077;
+    padding: 0 14px 5px 10px;
+    font-size: 50px;
+    height: 100px;
+}
+.book-add-dop {
+    border: 3px solid;
+    width: 210px;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+.add-book {
+    margin-left: 10px;
+    margin-top: 4px;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 10px 5px 10px;
+    border: 2px solid #000;
+    border-radius: 9px;
+    background: #edb077;
+    //position: absolute;
+    //left: 500px;
+}
+.show-book {
+    //padding: 5px 0px 5px 10px;
+    margin-bottom: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    width: 90%;
+    //height: 70px;
+    font-size: 40px;
+    background: #edb077;
+    //align-items: center;
+}
+.show-book-dop {
+    position: relative;
+    display: block;
+    padding: 10px 0px 10px 10px;
+}
+.book-rating {
+    position: absolute;
+    right: 10px;
+}
+.book-status {
+    position: absolute;
+    left: 10px;
+    top: 55px;
+    //margin-top: 10px;
+    font-size: 18px;
+}
+.book-br {
+    margin: 100px;
+}
+.book-description-dop {
+    margin: 25px 10px 0 0;
+    padding: 0 0 -10px 0;
+}
+.book-description {
+    font-size: 30px;
+    margin: 0;
+    -webkit-line-clamp: 4; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+
+}
+.content-title-book {
+    display: flex;
+    //border: 2px solid;
+    //border-radius: 5px;
+    width: 90%;
+    padding: 5px 0 10px 0;
+}
+.book-dop {
+    position: relative;
+    width: 100%;
+    display: flex
+    //max-width: 30ch;
+    border: 2px solid;
+    border-radius: 5px;
+    background: #edb077;
+}
+.book-title-dop {
+    width: 170px;
+    //border: 2px solid;
+}
+.book-title {
+    padding: 0 14px 5px 10px;
+    font-size: 50px;
+    //height: 100px;
+}
+.book-name {
+    position: absolute;
+    left: 170px;
+    top: 0px;
+    //border: 2px solid;
+    width: 770px;
+    font-size: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.book-edit-dop {
+    //border: 3px solid;
+    width: 300px;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+.edit-book, .delete-book {
+    margin-left: 10px;
+    margin-top: 4px;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 10px 5px 10px;
+    border: 2px solid #000;
+    border-radius: 9px;
+    background: #edb077;
+    //position: absolute;
+    //left: 500px;
+}
+.book-description-full {
+    font-size: 30px;
+    margin: 0;
+}
+.dop7 {
+    margin-top: 5px;
+    width: 90%;
+    height: 90%;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+}
+.back-button {
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+    border: 2px solid #000;
+    border-radius: 9px;
+    background: #edb077;
+}
+.form-add {
+    width: 700px;
+    border: 2px solid;
+    border-radius: 15px;
+    background: #edb077;
+    padding: 20px;
+    margin-top: 15px;
+    position: relative;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+}
+.dop8 {
+    //border: 2px solid;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-add-title {
+    font-size: 26px;
+    font-weight: bold;
+}
+.dop5 {
+    position: relative;
+    display: block;
+}
+.form-group {
+    display: block;
+    position: relative;
+    padding: 0 0 0px 0;
+    width: 100%;
+}
+.form-input {
+    font-size: 18px;
+    margin-top: 10px;
+    //position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 35px;
+    padding: 10px 0px 0px 5px;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 5px;
+    z-index: 0;
+    //background: transparent;
+}
+.form-input-area {
+    font-size: 18px;
+    margin-top: 10px;
+    //position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 200px;
+    padding: 10px 0px 0px 5px;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 5px;
+    z-index: 0;
+    //background: transparent;
+}
+.form-label {
+    position: absolute;
+    font-size: 20px;
+    left: 0px;
+    top: -10px;
+    //color: #5c5959;
+    z-index: 1;
+    transition: 0.3s;
+}
+.form-input:focus + .form-label {
+    font-size: 30px;
+}
+.form-input:required:valid + .form-label {
+    font-size: 10px;
+}
+.dop6 {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-button {
+    position: absolute;
+    font-size: 16px;
+    bottom: 0px;
+    color: #395744;
+    width: 160px;
+    padding: 9px;
+    text-align: center;
+    background: #8fd6ff;
+    border-radius: 10px;
+    border: 1px solid;
+}
+.form-button:hover {
+    //width: 160px;
+    //padding: 9px;
+    //bottom: 0px;
+    position: absolute;
+    background: #54c7d6;
+    border: 2px solid;
+}
+.dop3 {
+    //position: absolute;
+    //bottom: 50px;
+    width: 100%;
+    height: 100px;
+    //border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer {
+    width: 100%;
+    height: 100%;
+    background: #918e8a;
+    //border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.test {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    background: #918e8a;
+    //border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
